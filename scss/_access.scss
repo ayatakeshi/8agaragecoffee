@@ -1,0 +1,82 @@
+@use "mixin" as m;
+
+.p-access {
+    background-color: transparent;
+    .c-sectionTitle {
+        left: 8px;
+        background: url(../img/top/ACCESS.svg) no-repeat;
+        @include m.mq(pc) {
+            left: 96%;
+        }
+    }
+    &__mapArea {
+        padding: 60px 0 60px 40px;
+        @include m.mq(pc) {
+            min-height: 70vh;
+            padding: 60px 0;
+        }
+        .p-access__mapImage {
+            width: 100%;
+            height: 234px;
+            background-color: var(--backWhite);
+            @include m.mq(pc) {
+                width: 80%;
+                height: 60vh;
+                margin: auto;
+            }
+        }
+    }
+    &__textArea {
+        min-height: 30vh;
+        background-color: var(--backBrown90);
+        color: var(--textWhite);
+        &Inner {
+            padding: 20px 20px 70px;
+            @include m.mq(pc) {
+                padding: 40px 20px 70px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+    &__imageArea {
+        @include m.mq(pc) {
+        }
+    }
+    &__text {
+        width: 100%;
+        height: 18px;
+        margin-bottom: 6px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: url(../img/top/8A-logo_info.svg) no-repeat;
+        background-size: contain;
+        @include m.mq(pc) {
+            height: 26px;
+        }
+    }
+    &__list {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--textBlack);
+        @include m.mq(pc) {
+            width: 46%;
+        }
+        &Item {
+            .c-access__map {
+                margin-left: 10px;
+                text-decoration: underline;
+            }
+            .c-access__tel {
+                font-weight: bold;
+                &::before {
+                    display: inline;
+                    content: "● ";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,270 @@
+@use "mixin" as m;
+
+.p-about {
+    padding-bottom: 10px;
+    background-color: var(--backBeige);
+    @include m.mq(pc) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-bottom: 0;
+    }
+    .c-sectionTitle {
+        top: calc(20vh + 20px) !important;
+        left: 8px;
+        background: url(../img/top/ABOUT.svg) no-repeat;
+        @include m.mq(pc) {
+            top: 60px !important;
+            left: 4%;
+        }
+    }
+    &__imageArea {
+        min-height: 25vh;
+        background: url(../img/top/top_about.jpg) no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        @include m.mq(pc) {
+            width: 50%;
+        }
+    }
+    &__textArea {
+        @include m.mq(pc) {
+            width: 50%;
+        }
+        .c-moreButton {
+            background: url(../img/top/more_brown.svg) no-repeat;
+            @include m.mq(pc) {
+                margin: 40px auto 70px 20% !important;
+            }
+            &:hover {
+                background: url(../img/top/more_brown_coffee.svg) no-repeat;
+            }
+        }
+    }
+}
+
+.l-aboutMain {
+    .c-mainVisual {
+        background: url(../img/about/mv.jpg) no-repeat;
+        background-size: cover;
+    }
+    .p-aboutStory {
+        padding: 100px 40px;
+        background: var(--backDarkBrown);
+        color: var(--textWhite);
+        &__title {
+            height: 50px;
+            margin-bottom: 80px;
+            text-align: center;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            background: url(../img/about/storyof.svg) no-repeat;
+            background-size: contain;
+            background-position: 50% 50%;
+            @include m.mq(pc) {
+                width: 490px;
+                height: 70px;
+                margin: 0 auto 68px;
+            }
+        }
+        &__textArea {
+            @include m.mq(pc) {
+                width: 500px;
+                margin: auto;
+                text-align: center;
+            }
+        .p-aboutStory__text {
+            .pc {
+                display: none;
+                @include m.mq(pc) {
+                    display: block;
+                }
+            }
+        }
+        }
+    }
+    .p-aboutUs {
+        padding-bottom: 120px;
+        background: linear-gradient(rgba(233, 233, 233, 0), rgba(233, 233, 233, 1));
+        color: var(--textBlack);
+        &__inner {
+            padding: 90% 40px 100px;
+            background: url(../img/about/hokkaido.svg) no-repeat;
+            background-size: 80%;
+            background-position: 150% 5%;
+            @include m.mq(pc) {
+                position: relative;
+                padding-top: 400px;
+                background: none;
+            }
+        }
+        &__title {
+            margin-bottom: 56px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.6;
+            @include m.mq(pc) {
+                width: 560px;
+                margin: 0 auto 38px 10%;
+                font-size: 32px;
+            }
+        }
+        &__textArea {
+            margin-bottom: 60px;
+            @include m.mq(pc) {
+                width: 560px;
+                margin: 0 auto 120px 10%;
+            }
+        }
+        &__text {
+            .pc {
+                display: none;
+                @include m.mq(pc) {
+                    display: block;
+                }
+            }
+        }
+        &__imageArea {
+            .p-aboutUs__swiper {
+                /*スライダーの幅と高さを調整*/
+                width: 100%;
+                height: 200px;
+                margin: 0.5rem auto;
+            }
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .swiper-wrapper {
+                transition-timing-function: linear;
+            }
+        }
+        &__imageList {
+            li {
+                &:nth-child(1) {
+                    display: none;
+                    @include m.mq(pc) {
+                        position: absolute;
+                        top: 400px;
+                        right: 0;
+                        z-index: 20;
+                        display: block;
+                        width: 50%;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 70%;
+                    transform: translateX(-40px);
+                    @include m.mq(pc) {
+                        width: 40%;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 60%;
+                    margin: 0 0 25px auto;
+                    transform: translate(40px, -20px);
+                    @include m.mq(pc) {
+                        margin: 0 0 0 20%;
+                        width: 30%;
+                    }
+                }
+                &:nth-child(4) {
+                    width: 60%;
+                    margin: 0 auto 0 40px;
+                    @include m.mq(pc) {
+                        position: absolute;
+                        top: 55%;
+                        right: 0;
+                        z-index: 10;
+                        width: 35%;
+                    }
+                }
+
+            }
+        }
+    }
+    .p-aboutProducts {
+        background: var(--backDarkBrown);
+        color: var(--textWhite);
+        @include m.mq(pc) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+        &__textArea {
+            padding: 90px 40px 60px;
+            background: url(../img/top/ROASTERS.svg) no-repeat;
+            background-size: 15px;
+            background-position: 95% 40px;
+            @include m.mq(pc) {
+                width: 42%;
+                padding: 100px 10% 40px 40px;
+            }
+        }
+        &__title {
+            margin-bottom: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            @include m.mq(pc) {
+            }
+        }
+        &__text {
+            margin-bottom: 40px;
+            @include m.mq(pc) {
+            }
+            .pc {
+                display: none;
+                @include m.mq(pc) {
+                    display: block;
+                }
+            }
+        }
+        &__moreButton {
+            width: 170px;
+            height: 60px;
+            margin-left: auto;
+            background: url(../img/top/more_white.svg) no-repeat;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &__imageArea {
+            @include m.mq(pc) {
+                width: 58%;
+            }
+        }
+        &__coffee {
+            background: var(--backWhite);
+            color: var(--textBlack);
+            padding-bottom: 80px;
+            @include m.mq(pc) {
+                display: flex;
+                width: 100%;
+                padding-bottom: 130px;
+            }
+            &Image {
+                padding: 120px 20px 0;
+                margin-bottom: 52px;
+                @include m.mq(pc) {
+                    width: 50%;
+                    margin: 0;
+                    padding: 120px 40px 0;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            &Text {
+                padding: 0 40px;
+                @include m.mq(pc) {
+                    width: 50%;
+                    padding: 150px 10% 0 40px;
+                }
+                
+            }
+        }
+    }
+}

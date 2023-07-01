@@ -1,0 +1,75 @@
+@use "mixin" as m;
+
+.p-news {
+    padding-bottom: 10px;
+    background-color: var(--backBrown90);
+    color: #ffffff;
+    .c-sectionTitle {
+        right: 8px;
+        background: url(../img/top/NEWS.svg) no-repeat;
+        @include m.mq(pc) {
+            right: 4%;
+        }
+    }
+    &__linkArea {
+        padding: 40px 50px 0;
+        @include m.mq(pc) {
+            padding: 80px 0 0;
+        }
+    }
+    &__list {
+        &Item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 12px 15px;
+            border: 1px solid var(--textWhite);
+            @include m.mq(pc) {
+                width: 60%;
+                margin: 0 auto 20px;
+                padding: 12px 40px;
+
+                &::after {
+                    display: block;
+                    content: ">";
+                    position: absolute;
+                    top: 12px;
+                    right: 40px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                display: block;
+                .c-newsIcon {
+                    display: inline-block;
+                    width: 30px;
+                    text-align: center;
+                    margin-right: 5px;
+                    img {
+                        vertical-align: baseline;
+                    }
+                }
+                .c-newsDate {
+                    display: block;
+                    font-weight: bold;
+                    @include m.mq(pc) {
+                        display: inline;
+                    }
+                    &::after {
+                        display: inline;
+                        content: "|";
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    .c-moreButton {
+        margin: 40px 10% 70px auto !important;
+        background: url(../img/top/more_white.svg) no-repeat;
+            &:hover {
+                background: url(../img/top/more_white_coffee.svg) no-repeat;
+            }
+    }
+}

@@ -1,0 +1,284 @@
+@use "mixin" as m;
+
+.p-cafe {
+    padding-bottom: 10px;
+    background-color: var(--backBeige);
+    @include m.mq(pc) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+    .c-sectionTitle {
+        left: 8px;
+        background: url(../img/top/CAFE.svg) no-repeat;
+        @include m.mq(pc) {
+            left: 4%;
+        }
+    }
+    &__textArea {
+        @include m.mq(pc) {
+            width: 50%;
+        }
+    }
+    &__imageArea {
+        width: 100%;
+        padding: 40px 50px 0;
+        @include m.mq(pc) {
+            position: relative;
+            width: 50%;
+        }
+        .p-cafe__image {
+            width: 100%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            @include m.mq(pc) {
+                position: absolute;
+            }
+            &:first-child {
+                @include m.mq(pc) {
+                    top: 80px;
+                    right: 0;
+                    width: 80%;
+                    aspect-ratio: 3/2;
+                }
+                @include m.mq(pc) {
+                    top: 80px;
+                    right: 0;
+                    width: 60%;
+                    aspect-ratio: 3/2;
+                }
+            }
+            &:nth-child(2) {
+                @include m.mq(pc) {
+                    top: 40%;
+                    left: 0;
+                    width: 60%;
+                    aspect-ratio: 5/4;
+                }
+                @include m.mq(pc) {
+                    top: 40%;
+                    left: 0;
+                    width: 45%;
+                    aspect-ratio: 5/4;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .c-moreButton {
+        margin: 40px auto 70px 10% !important;
+        background: url(../img/top/more_brown.svg) no-repeat;
+            &:hover {
+                background: url(../img/top/more_brown_coffee.svg) no-repeat;
+            }
+        }
+}
+.l-cafeMain {
+    background-color: var(--backWhite);
+    .p-cafeIntroduction {
+        margin-bottom: 140px;
+        padding: 54px 40px 0;
+        @include m.mq(pc) {
+            display: flex;
+            max-height: 600px;
+            padding: 120px 15% 100px;
+        }
+        &__textArea {
+            margin-bottom: 40px;
+            @include m.mq(pc) {
+                width: 50%;
+            }
+        }
+        &__imageArea {
+            text-align: center;
+            @include m.mq(pc) {
+                width: 50%;
+            }
+            img {
+                max-height: 450px;
+            }
+        }
+        &__title {
+            margin-bottom: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        &__text {
+            @include m.mq(pc) {
+                padding-right: 40px;
+            }
+            .pc {
+                display: none;
+                @include m.mq(pc) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .p-cafeMenu {
+        @include m.mq(pc) {
+            margin-bottom: 120px;
+        }
+        &__imageArea {
+            aspect-ratio: 2/1;
+            overflow: hidden;
+            @include m.mq(pc) {
+                width: 50%;
+                aspect-ratio: 3/2;
+            }
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: -70px;
+                width: 60%;
+                height: 30%;
+                @include m.mq(pc) {
+                    top: 5%;
+                    width: 25%;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__textArea {
+            padding: 40px 40px 0;
+            @include m.mq(pc) {
+                width: 50%;
+            }
+        }
+        &__time {
+            color: var(--textBrown);
+            font-weight: bold;
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+        &__list {
+            li {
+                position: relative;
+                margin-bottom: 30%;
+                @include m.mq(pc) {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-bottom: 0;
+                }
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                    .p-cafeMenu__textArea {
+                        @include m.mq(pc) {
+                            padding-left: 10%;
+                        }
+                    }
+                    .p-cafeMenu__time {
+                        @include m.mq(pc) {
+                            text-align: left;
+                        }
+                    }
+                }
+                &:nth-child(odd) {
+                    .p-cafeMenu__textArea {
+                        @include m.mq(pc) {
+                            padding-right: 10%;
+                        }
+                    }
+                    .p-cafeMenu__time {
+                        @include m.mq(pc) {
+                            text-align: right;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    .p-cafeMenu__imageArea {
+                        &::after {
+                            left: 5%;
+                            background: url(../img/cafe/drink.svg) no-repeat;
+                            background-size: contain;
+                            @include m.mq(pc) {
+                                left: 48%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .p-cafeMenu__imageArea {
+                        &::after {
+                            right: 5%;
+                            width: 80%;
+                            background: url(../img/cafe/lunchfood.svg) no-repeat;
+                            background-size: contain;
+                            @include m.mq(pc) {
+                                right: 48%;
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .p-cafeMenu__imageArea {
+                        &::after {
+                            right: 5%;
+                            width: 80%;
+                            background: url(../img/cafe/sweets.svg) no-repeat;
+                            background-size: contain;
+                            @include m.mq(pc) {
+                                right: 25%;
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    .p-cafeMenu__imageArea {
+                        &::after {
+                            left: 5%;
+                            background: url(../img/cafe/cafetime.svg) no-repeat;
+                            background-size: contain;
+                            @include m.mq(pc) {
+                                left: 25%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__button {
+            border: 1px solid var(--backDarkBrown);
+            text-align: center;
+            @include m.mq(pc) {
+                margin-bottom: 60px;
+            }
+            a {
+                display: block;
+                padding: 6px 0;
+            }
+        }
+    }
+    .p-floorInformation {
+        padding: 0 20px;
+        @include m.mq(pc) {
+            padding: 0 15%;
+        }
+        &__title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &__imageArea {
+            text-align: center;
+            img {
+                width: 100%;
+            }
+        }
+        &__text {
+            font-size: 10px;
+            text-align: right;
+        }
+    }
+}

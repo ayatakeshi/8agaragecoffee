@@ -1,0 +1,79 @@
+@use "mixin" as m;
+
+.l-footer {
+    padding: 34px 10px 30px;
+    background-color: #F5F0EA;
+    color: var(--textBrown);
+    font-weight: regular;
+    @include m.mq(pc) {
+        min-height: 30vh;
+        padding-bottom: 20px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        height: calc(100% - 14px);
+        padding: 20px 10px;
+        border-top: 1px solid var(--textBrown);
+        @include m.mq(pc) {
+            width: 90%;
+            height: 20vh;
+            padding: 0 0 20px;
+            margin: auto;
+        }
+        .c-footer__logo {
+            width: 135px;
+            height: 52px;
+            background: url(../img/top/8A-logo_footer.svg) no-repeat;
+            background-size: cover;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .p-footer__textArea {
+            width: 50%;
+            .p-footer__link {
+                height: 100%;
+                @include m.mq(pc) {
+                    display: flex;
+                    justify-content: end;
+                }
+                &Item {
+                    align-self: flex-end;
+                    text-align: right;
+                    white-space: nowrap;
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    @include m.mq(pc) {
+                        margin-bottom: 0;
+                        &::after {
+                            display: inline;
+                            content: "|";
+                            padding: 0 5px;
+                        }
+                        &:last-child::after {
+                            display :none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .c-copyRight {
+        width: 100%;
+        text-align: center;
+        @include m.mq(pc) {
+            width: 90%;
+            margin: auto;
+            text-align: right;
+        }
+    }
+}
+.l-cafeFooter {
+    background-color: var(--backWhite);
+
+}
