@@ -351,7 +351,7 @@
   }
 }
 .p-about .c-sectionTitle {
-  top: calc(20vh + 20px) !important;
+  top: calc(20vh + 60px) !important;
   left: 8px;
   background: url(../img/top/ABOUT.svg) no-repeat;
 }
