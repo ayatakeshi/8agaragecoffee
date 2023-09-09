@@ -103,9 +103,16 @@
         width: 290px;
         height: 50px;
         margin: auto;
-        border: 1px solid var(--textBrown);
-        text-align: center;
-        line-height: 50px;
+        background: url(../img/top/CHECK-ONLINESTORE.png) no-repeat;
+        background-size: contain;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: .8s;
+        &:hover {
+            background: url(../img/top/CHECK-ONLINESTORE_hover.png) no-repeat;
+            background-size: contain;
+        }
         @include m.mq(pc) {
             width: 348px;
         }

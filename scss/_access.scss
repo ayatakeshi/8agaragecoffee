@@ -62,19 +62,32 @@
     &__list {
         padding: 20px 0;
         border-bottom: 1px solid var(--textBlack);
+        &:first-of-type {
+            padding: 50px 0 20px;
+        }
         @include m.mq(pc) {
             width: 46%;
         }
         &Item {
+            &.line {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--textBlack);
+            }
             .c-access__map {
+                display: block;
                 margin-left: 10px;
                 text-decoration: underline;
             }
             .c-access__tel {
                 font-weight: bold;
                 &::before {
-                    display: inline;
-                    content: "● ";
+                    display: inline-block;
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    background: url(../img/top/tel-icon.png) no-repeat;
+                    background-size: contain;
                 }
             }
         }

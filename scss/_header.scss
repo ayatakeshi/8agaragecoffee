@@ -31,9 +31,9 @@
             top: 20px;
             left: 30px;
             z-index: 999;
-            width: 44px;
+            width: 50px;
             height: 35px;
-            background: url(../img/top/HM.svg) no-repeat;
+            background: url(../img/top/hm.svg) no-repeat;
             background-size: contain;
             transition: .8s;
         }
@@ -101,17 +101,6 @@
                             }
                         }
                     }
-                    &Item {
-                        &:nth-last-child(-n+2) {
-                            a {
-                                &:hover {
-                                    &::after {
-                                        display: none;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
                 .p-externalLink__list {
                     display: flex;
@@ -166,8 +155,9 @@
             &__imageArea {
                 display: none;
                 @include m.mq(pc) {
-                    background: url(../img/top/hm_pcbk.jpg) no-repeat;
-                    background-position: 60% 50%;
+                    background: url(../img/top/PCver-HM_pic.png) no-repeat;
+                    background-size: cover;
+                    // background-position: 60% 50%;
                     display: block;
                     width: 50%;
                 }
@@ -212,10 +202,16 @@
             &:last-child {
                 width: 24px;
                 height: 24px;
-                background: url(../img/top/instagram.svg) no-repeat;
+                background: url(../img/top/insta.svg) no-repeat;
+                background-size: contain;
                 text-indent: 100%;
                 white-space: nowrap;
                 overflow: hidden;
+                transition: .8s;
+                &:hover {
+                    background: url(../img/top/insta_hover.png) no-repeat;
+                    background-size: contain;
+                }
             }
         }
     }
@@ -308,5 +304,19 @@
             height: 50vh;
             background: var(--backWhite);
         }
+    }
+}
+.l-newsHeader {
+    height: 40vh;
+    background: var(--backWhite);
+    @include m.mq(tb) {
+    }
+
+    .c-pageTitle {
+        background: url(../img/top/NEWS.svg) no-repeat;
+        background-size: contain;
+    }
+    .l-header__inner {
+
     }
 }

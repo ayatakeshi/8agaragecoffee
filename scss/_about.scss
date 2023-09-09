@@ -9,7 +9,7 @@
         padding-bottom: 0;
     }
     .c-sectionTitle {
-        top: calc(20vh + 20px) !important;
+        top: calc(20vh + 60px) !important;
         left: 8px;
         background: url(../img/top/ABOUT.svg) no-repeat;
         @include m.mq(pc) {
@@ -31,12 +31,14 @@
             width: 50%;
         }
         .c-moreButton {
-            background: url(../img/top/more_brown.svg) no-repeat;
+            background: url(../img/top/more_brown.png) no-repeat;
+            background-size: contain;
             @include m.mq(pc) {
                 margin: 40px auto 70px 20% !important;
             }
             &:hover {
-                background: url(../img/top/more_brown_coffee.svg) no-repeat;
+                background: url(../img/top/more_brown_hover.png) no-repeat;
+                background-size: contain;
             }
         }
     }
@@ -44,7 +46,7 @@
 
 .l-aboutMain {
     .c-mainVisual {
-        background: url(../img/about/mv.jpg) no-repeat;
+        background: url(../img/about/ABOUT_KV-pic.png) no-repeat;
         background-size: cover;
     }
     .p-aboutStory {
@@ -223,13 +225,20 @@
             }
         }
         &__moreButton {
-            width: 170px;
+            width: 240px;
             height: 60px;
             margin-left: auto;
-            background: url(../img/top/more_white.svg) no-repeat;
+            background: url(../img/about/CHECK-PRODUCT.png) no-repeat;
+            background-size: contain;
             text-indent: 100%;
             white-space: nowrap;
             overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                background: url(../img/about/CHECK-PRODUCT_hover.png) no-repeat;
+                background-size: contain;
+            }
         }
         &__imageArea {
             @include m.mq(pc) {

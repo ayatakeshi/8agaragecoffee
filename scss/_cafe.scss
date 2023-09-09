@@ -205,6 +205,15 @@
                             }
                         }
                     }
+                    // drink
+                    .p-cafeMenu__button {
+                        background: url(../img/cafe/MENU-DRINK.png) no-repeat;
+                        background-size: contain;
+                        &:hover {
+                            background: url(../img/cafe/MENU_DRINK_hover.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
                 }
                 &:nth-child(2) {
                     .p-cafeMenu__imageArea {
@@ -217,6 +226,15 @@
                                 right: 48%;
                                 width: 30%;
                             }
+                        }
+                    }
+                    // lunch food
+                    .p-cafeMenu__button {
+                        background: url(../img/cafe/MENU-LUNCH.png) no-repeat;
+                        background-size: contain;
+                        &:hover {
+                            background: url(../img/cafe/MENU-LUNCH_hover.png) no-repeat;
+                            background-size: contain;
                         }
                     }
                 }
@@ -233,6 +251,15 @@
                             }
                         }
                     }
+                    // lunch sweets
+                    .p-cafeMenu__button {
+                        background: url(../img/cafe/MENU-SWEET.png) no-repeat;
+                        background-size: contain;
+                        &:hover {
+                            background: url(../img/cafe/MENU-SWEET_hover.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
                 }
                 &:nth-child(4) {
                     .p-cafeMenu__imageArea {
@@ -245,13 +272,26 @@
                             }
                         }
                     }
+                    // cafe
+                    .p-cafeMenu__button {
+                        background: url(../img/cafe/MENU-CAFE.png) no-repeat;
+                        background-size: contain;
+                        &:hover {
+                            background: url(../img/cafe/MENU-CAFE_hover.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
                 }
             }
         }
 
         &__button {
-            border: 1px solid var(--backDarkBrown);
-            text-align: center;
+            max-width: 480px;
+            margin: auto;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.5s;
             @include m.mq(pc) {
                 margin-bottom: 60px;
             }
@@ -259,6 +299,9 @@
                 display: block;
                 padding: 6px 0;
             }
+
+
+
         }
     }
     .p-floorInformation {
@@ -281,4 +324,77 @@
             text-align: right;
         }
     }
+
+
+    // モーダルウィンドウ
+    /* グレー背景 */
+.layer {
+    background: rgba(0, 0, 0, .2); 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  /* モーダルコンテンツ */
+  .modal {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    min-width: 80vh;
+  }
+  
+  .modal__inner {
+    margin-top: 125px;
+    margin-bottom: 125px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    display: block;
+    padding: 21px 8px 21px;
+    height: auto;
+  }
+  
+  .modal__content {
+    padding-top: 15px;
+    padding-bottom: 23px;
+  }
+  .modal__button-wrap {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: inline-flex;
+  }
+  
+  .close-button {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    background: var(--backDarkBrown);
+    padding: 0;
+    border: transparent;
+    cursor: pointer;
+  }
+  
+  .close-button span {
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 50%;
+    // border-radius: 20px;
+  }
+  
+  .close-button span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .close-button span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
 }

@@ -2,7 +2,7 @@
 
 .l-footer {
     padding: 34px 10px 30px;
-    background-color: #F5F0EA;
+    background: var(--backBeige);
     color: var(--textBrown);
     font-weight: regular;
     @include m.mq(pc) {
@@ -73,7 +73,18 @@
         }
     }
 }
-.l-cafeFooter {
+.l-cafeFooter, .l-newsFooter {
     background-color: var(--backWhite);
-
+}
+.l-roastersFooter {
+    background-color: var(--backDarkBrown);
+    color: var(--textWhite);
+    .l-footer__inner {
+        border-top: 1px solid var(--textWhite);
+    }
+    .c-footer__logo {
+        background: url(../img/top/8A-logo_mv.svg) no-repeat;
+        background-size: cover;
+    }
+    // 8A-logo_mv.svg
 }
