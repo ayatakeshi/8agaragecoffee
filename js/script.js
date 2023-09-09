@@ -56,6 +56,8 @@ $('.p-slider').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
     responsive: [
         {
         breakpoint: 1025,//モニターの横幅が769px以下の見せ方
