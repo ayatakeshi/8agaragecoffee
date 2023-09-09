@@ -1138,10 +1138,10 @@
 }
 .p-cafe .c-moreButton {
   margin: 40px auto 70px 10% !important;
-  background: url(../img/top/more_brown.svg) no-repeat;
+  background: url(../img/top/more_brown.png) no-repeat;
 }
 .p-cafe .c-moreButton:hover {
-  background: url(../img/top/more_brown_coffee.svg) no-repeat;
+  background: url(../img/top/more_brown_hover.png) no-repeat;
 }
 
 .l-cafeMain {
