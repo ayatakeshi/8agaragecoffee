@@ -1139,9 +1139,11 @@
 .p-cafe .c-moreButton {
   margin: 40px auto 70px 10% !important;
   background: url(../img/top/more_brown.png) no-repeat;
+  background-size: contain;
 }
 .p-cafe .c-moreButton:hover {
   background: url(../img/top/more_brown_hover.png) no-repeat;
+  background-size: contain;
 }
 
 .l-cafeMain {
